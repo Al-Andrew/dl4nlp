@@ -1,0 +1,5 @@
+click==8.3.0
+dearpygui==2.1.0
+joblib==1.5.2
+nltk==3.9.2
+regex==2025.9.18
