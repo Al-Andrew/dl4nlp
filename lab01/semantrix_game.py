@@ -13,10 +13,11 @@ try:
 except LookupError:
     nltk.download('brown')
 
+
 # --- Constants ---
 # Main Window Dimensions
-MAIN_WINDOW_WIDTH = 800
-MAIN_WINDOW_HEIGHT = 600
+MAIN_WINDOW_WIDTH = 1440
+MAIN_WINDOW_HEIGHT = 1280
 
 # Game Configuration
 NUM_RANDOM_WORDS = 100
@@ -240,6 +241,11 @@ def restart_game():
 
 def main():
     dpg.create_context()
+
+    with dpg.font_registry():
+        default_font = dpg.add_font("./assets/Roboto-Regular.ttf", 48)
+        dpg.bind_font(default_font)
+
 
     # --- UI Layout ---
     with dpg.window(tag="main_game_window", label="Semantrix Game", autosize=True, no_title_bar=True, no_resize=True, no_move=True):
